@@ -5,7 +5,13 @@ const crypto = require("crypto");
 const DIST_DIR = path.join(__dirname, "dist");
 const SRC_DIR = __dirname;
 
-const FILES_TO_HASH = ["main.js", "fps.js", "style.css", "favicon.png"];
+const FILES_TO_HASH = [
+  "main.js",
+  "fps.js",
+  "mobile-check.js",
+  "style.css",
+  "favicon.png",
+];
 
 if (fs.existsSync(DIST_DIR)) {
   fs.rmSync(DIST_DIR, { recursive: true });
