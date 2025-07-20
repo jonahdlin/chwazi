@@ -1,0 +1,19 @@
+body {
+  margin: 0;
+  overflow: "hidden";
+}
+
+body,
+canvas {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  touch-action: none;
+}
+
+#main {
+  width: 100vw;
+  height: 100vh;
+  background-color: #212121;
+}
