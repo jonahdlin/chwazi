@@ -330,6 +330,32 @@ const ValidKeys = [
   "x",
   "y",
   "z",
+  "A",
+  "B",
+  "C",
+  "D",
+  "E",
+  "F",
+  "G",
+  "H",
+  "I",
+  "J",
+  "K",
+  "L",
+  "M",
+  "N",
+  "O",
+  "P",
+  "Q",
+  "R",
+  "S",
+  "T",
+  "U",
+  "V",
+  "W",
+  "X",
+  "Y",
+  "Z",
   "0",
   "1",
   "2",
@@ -393,16 +419,16 @@ class Picker {
             return;
           }
           this.addParticipant({
-            id: event.key,
+            id: event.key.toUpperCase(),
             x: clamp(
-              Math.random() * this.canvas.width,
+              Math.random() * window.innerWidth,
               MaskCircleDiameter(this.canvas) / 2,
-              this.canvas.width - MaskCircleDiameter(this.canvas) / 2
+              window.innerWidth - MaskCircleDiameter(this.canvas) / 2
             ),
             y: clamp(
-              Math.random() * this.canvas.height,
+              Math.random() * window.innerHeight,
               MaskCircleDiameter(this.canvas) / 2,
-              this.canvas.height - MaskCircleDiameter(this.canvas) / 2
+              window.innerHeight - MaskCircleDiameter(this.canvas) / 2
             ),
             label: event.key,
           });
@@ -410,7 +436,7 @@ class Picker {
       });
       window.addEventListener("keyup", (event) => {
         if (ValidKeys.includes(event.key)) {
-          this.removeParticipant({ id: event.key });
+          this.removeParticipant({ id: event.key.toUpperCase() });
           event.preventDefault();
         }
       });
